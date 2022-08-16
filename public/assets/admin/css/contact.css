@@ -1,0 +1,128 @@
+/*contact us*/
+/*---------------------------------------------------------------------------
+## Contact Deatil  button color
+-----------------------------------------------------------------------------*/
+.sahid_contact_detail_raki.layout_two .contact_form .wpcf7 input[type="submit"] {
+  background-color: #cf9455;
+  border: 1px solid #cf9455; }
+
+.sahid_contact_detail_raki.layout_two .contact_form .wpcf7 input[type="submit"]:hover {
+  background-color: #a16e37;
+  border: 1px solid #a16e37; }
+
+/*--------------------------------------------------------------
+##  Contact Detail
+--------------------------------------------------------------*/
+.sahid_contact_detail_raki {
+  position: relative;
+  background: #ececec; }
+
+.sahid_contact_detail_raki h2 {
+  color: #000; }
+
+.sahid_contact_detail_raki p {
+  color: #000;
+  margin-bottom: 40px; }
+
+.sahid_contact_detail_raki .call-us {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 40px;
+  display: inline-block;
+  width: 100%; }
+
+.sahid_contact_detail_raki .call-us i {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 1px solid #FFF;
+  background: #FFF;
+  text-align: center;
+  color: #0e62b1;
+  line-height: 46px;
+  margin-right: 15px;
+  border-radius: 3px;
+  float: left; }
+
+.sahid_contact_detail_raki .contact_info_detail {
+  float: left;
+  width: calc(100% - 65px);
+  display: block;
+  color: #FFF; }
+
+.sahid_contact_detail_raki .contact_info_detail h4 {
+  font-size: 20px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0px; }
+
+.sahid_contact_detail_raki .contact_info_detail span {
+  font-size: 15px; }
+
+.sahid_contact_detail_raki .call-us.mail-us {
+  margin-bottom: 0px; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  width: 100%; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 span {
+  width: 100%; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 .wpcf7-textarea {
+  height: 200px; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 p {
+  margin-bottom: 0; }
+
+.sahid_contact_detail_raki .contact_form {
+  background-color: #ffffff;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 30px 50px; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 input,
+.sahid_contact_detail_raki .contact_form .wpcf7 .wpcf7-textarea {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 15px;
+  color: #968c8c;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  padding: 15px 20px; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 input {
+  height: 50px; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 .wpcf7-textarea {
+  height: 150px; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 input[type="submit"] {
+  display: inline-block;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+  padding: 8px 25px;
+  font-size: 16px;
+  border-radius: 0px;
+  transition: all .15s ease-in-out;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  background-color: #e4353a;
+  border: 1px solid #e4353a; }
+
+.sahid_contact_detail_raki .contact_form .wpcf7 input[type="submit"]:hover {
+  background-color: #cfa463;
+  border: 1px solid #cfa463;
+  opacity: 1; }
+
+  .sahid_contact_detail_raki form{
+    position: relative !important;
+  }
+  .sahid_contact_detail_raki{
+    padding: 50px 0;
+  
+  }
