@@ -2,7 +2,6 @@
 
 namespace Anakadote\ImageManager;
 
-use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
 class ImageManagerServiceProvider extends ServiceProvider
@@ -22,7 +21,7 @@ class ImageManagerServiceProvider extends ServiceProvider
     public function boot()
     {        
         $this->publishes(
-            [__DIR__ . '/assets' => public_path('vendor/anakadote/image-manager')]
+            [__DIR__.'/assets' => public_path('vendor/anakadote/image-manager')]
         );
     }
 
@@ -40,7 +39,7 @@ class ImageManagerServiceProvider extends ServiceProvider
         $this->app['laravel-5-image-manager'] = $this->app->make(Anakadote\ImageManager\Facades\ImageManager::class);
         
         $this->app->booting(function() {
-            $loader = AliasLoader::getInstance();
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
             $loader->alias('ImageManager', 'Anakadote\ImageManager\Facades\ImageManager');
         });
     }

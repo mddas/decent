@@ -34,7 +34,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
      */
     public function __construct(string $dsn)
     {
-        if (!str_starts_with($dsn, 'file:')) {
+        if (0 !== strpos($dsn, 'file:')) {
             throw new \RuntimeException(sprintf('Please check your configuration. You are trying to use FileStorage with an invalid dsn "%s". The expected format is "file:/path/to/the/storage/folder".', $dsn));
         }
         $this->folder = substr($dsn, 5);
@@ -56,15 +56,15 @@ class FileProfilerStorage implements ProfilerStorageInterface
         }
 
         $file = fopen($file, 'r');
-        fseek($file, 0, \SEEK_END);
+        fseek($file, 0, SEEK_END);
 
         $result = [];
         while (\count($result) < $limit && $line = $this->readLineFromFile($file)) {
             $values = str_getcsv($line);
-            [$csvToken, $csvIp, $csvMethod, $csvUrl, $csvTime, $csvParent, $csvStatusCode] = $values;
+            list($csvToken, $csvIp, $csvMethod, $csvUrl, $csvTime, $csvParent, $csvStatusCode) = $values;
             $csvTime = (int) $csvTime;
 
-            if ($ip && !str_contains($csvIp, $ip) || $url && !str_contains($csvUrl, $url) || $method && !str_contains($csvMethod, $method) || $statusCode && !str_contains($csvStatusCode, $statusCode)) {
+            if ($ip && false === strpos($csvIp, $ip) || $url && false === strpos($csvUrl, $url) || $method && false === strpos($csvMethod, $method) || $statusCode && false === strpos($csvStatusCode, $statusCode)) {
                 continue;
             }
 
@@ -123,11 +123,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
             $file = 'compress.zlib://'.$file;
         }
 
-        if (!$data = unserialize(file_get_contents($file))) {
-            return null;
-        }
-
-        return $this->createProfileFromData($token, $data);
+        return $this->createProfileFromData($token, unserialize(file_get_contents($file)));
     }
 
     /**
@@ -264,7 +260,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
 
             $position += $upTo;
             $line = substr($buffer, $upTo + 1).$line;
-            fseek($file, max(0, $position), \SEEK_SET);
+            fseek($file, max(0, $position), SEEK_SET);
 
             if ('' !== $line) {
                 break;
@@ -301,11 +297,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
                 $file = 'compress.zlib://'.$file;
             }
 
-            if (!$childData = unserialize(file_get_contents($file))) {
-                continue;
-            }
-
-            $profile->addChild($this->createProfileFromData($token, $childData, $profile));
+            $profile->addChild($this->createProfileFromData($token, unserialize(file_get_contents($file)), $profile));
         }
 
         return $profile;

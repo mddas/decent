@@ -93,11 +93,12 @@ Route::prefix('admin')->group(function(){
     Route::get('/applied-job-list', 'ContactController@AppliedJob')->name("AppliedJob");
 
 });
-//Route::get('view-all/{slug}',[HomeController::class,"viewAll"])->name['viewall'];
-Route::get('gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
-Route::get('video-view/{slug}',[HomeController::class,'videogallery'])->name('videogallery');
 
-Route::get('view-all',[HomeController::class,"viewAll"])->name('viewall');
+Route::get('get_gallery_photos',[HomeController::class,'get_gallery_photos'])->name('get_gallery_photos');
+Route::get('gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
+Route::get('inquiry',[ContactController::class,'inquiry'])->name('inquiry');
+Route::get('job-category',[HomeController::class,'allCategory'])->name('allCategory');
+Route::get('/all-jobs',[HomeController::class,'allJobs'])->name('allJobs');
 Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
 
 Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
@@ -108,40 +109,3 @@ Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('co
 
 Route::get('/{slug}',[HomeController::class,'category'])->name('category');
 Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
-
-//Route::get('/page/{slug}',[HomeController::class,'singlePage'])->name('singlepage');
-// Route::any('{alias}', [
-//     'as' => 'pages',
-//     'uses' => 'HomeController@inner_pages'
-// ]);
-
-// Route::any('{alias}/details', [
-//     'as' => 'inner_pages.details',
-//     'uses' => 'HomeController@getInnerPageDetails'
-// ]);
-
-
-// Route::any('category/{alias}', [
-//     'as' => 'category.pages',
-//     'uses' => 'HomeController@getCategoryPages'
-// ]);
-// Route::any('horoscope/daily', [
-//     'as' => 'horoscope',
-//     'uses' => 'HomeController@getHoroscopePage'
-// ]);
-// Route::get('horoscope/weekly', [
-//     'as' => 'horoscope.weekly',
-//     'uses' => 'HomeController@getWeeklyHoroscope'
-// ]);
-// Route::get('horoscope/monthly', [
-//     'as' => 'horoscope.monthly',
-//     'uses' => 'HomeController@getMonthlyHoroscope'
-// ]);
-// Route::get('horoscope/yearly', [
-//     'as' => 'horoscope.yearly',
-//     'uses' => 'HomeController@getYearlyHoroscope'
-// ]);
-// Route::post('/subscribe/website',[
-//     'as' =>'subscribe',
-//     'uses'=>'HomeController@subscribePage'
-// ]);
