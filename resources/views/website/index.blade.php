@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('slider')
+	@include("website.slider")
+@endsection
 @section('content')
 	@include('website.top-section')
 	@include('website.about')
