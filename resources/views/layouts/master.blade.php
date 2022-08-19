@@ -56,13 +56,19 @@
 					<div class="quote-btn"><a class="btn" href="get-a-quote.html">Sign in</a></div>
 				</div>
 				<!-- MainNav -->
+			   
 				<nav class="navbar-collapse collapse" id="mainnav">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="/">Home</a></li>
 						@foreach($menus as $menu)
-							<li><a href="{{$menu->nav_name}}">{{$menu->caption}}</a></li>
+						<li class="dropdown"><a href="#">{{$menu->caption}}<b class="caret"></b></a>
+							@foreach($menu->childs as $submenu)
+							<ul class="dropdown-menu">
+								<li><a href="#">{{$submenu->caption}}</a></li>
+							</ul>
+							@endforeach
+						</li>
 						@endforeach
-						
 						<li class="quote-btn"><a class="btn" href="apply-form.html">Apply NoW</a></li>
 					</ul>
 				</nav>     
