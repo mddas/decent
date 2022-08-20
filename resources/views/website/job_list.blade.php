@@ -11,19 +11,19 @@
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
 									<h6>Helper Urgently Needed</h6>
-									<span class="job_company">Company: Hotel Habibi</span>
+									<span class="job_company">Company: {{$job->getJob->company_name}}</span>
 								</div>
 							</div>
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
-									<span><i class="fa fa-map-marker"></i> Dubai</span>
-									<p>Job Category Hotel / Resort</p>
+									<span><i class="fa fa-map-marker"></i>{{$job->getJob->country}}</span>
+									<p>Job Category {{$job->parents->caption}}</p>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
 								<div class="text">
-									<span class="job_company">Salary : $ 600 Monthly</span>
-									<span>Contract : 2 Year(s)</span>
+									<span class="job_company">Salary : Rs {{$job->getJob->salary}} Monthly</span>
+									<span>Contract : {{$job->getJob->contract_time}} Year(s)</span>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
