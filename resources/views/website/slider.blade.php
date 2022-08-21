@@ -38,7 +38,7 @@
 		    <!-- End Brochure section-->
 
 		    <!-- Job Highlight section-->
-			@if($jobs->count()>540)
+			@if($jobs->count()>0)
 		    <div class="job-highlight">
 		        <div class="job-detail">
 		        	<div class="owl-carousel loop job-carousel">
