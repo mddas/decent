@@ -12,19 +12,19 @@
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
 									<h6>Helper Urgently Needed</h6>
-									<span class="job_company">Company: {{$job->getJob->company_name}}</span>
+									<span class="job_company">Company: {{$job->company_name}}</span>
 								</div>
 							</div>
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
-									<span><i class="fa fa-map-marker"></i>{{$job->getJob->country}}</span>
+									<span><i class="fa fa-map-marker"></i>{{$job->country}}</span>
 									<p>Job Category {{$job->parents->caption ?? ''}}</p>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
 								<div class="text">
-									<span class="job_company">Salary : Rs {{$job->getJob->salary}} Monthly</span>
-									<span>Contract : {{$job->getJob->contract_time}} Year(s)</span>
+									<span class="job_company">Salary : Rs {{$job->salary}} Monthly</span>
+									<span>Contract : {{$job->contract_time}} Year(s)</span>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">

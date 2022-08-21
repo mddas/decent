@@ -2,7 +2,7 @@
 			<!-- Wrapper for Slides -->
 			<div class="carousel-inner">
 				<!---start--->
-				{{dd($jobs)}}
+	
 				@foreach($sliders as $slider)
 				<div class="item active">
 					<!-- Set the first background image using inline CSS below. -->
@@ -46,11 +46,11 @@
 						@foreach($jobs as $job)					
 							<div class="text">
 								<h6>Helper Urgently Needed</h6>
-								<span class="job_company">Company: {{$job->getJob->company_name}}</span>
-								<span><i class="fa fa-map-marker"></i> {{$job->getJob->country}}</span>
-								<p>Job Category: {{$job->parents->caption}}
-								<span class="job_company">Salary : Rs. {{$job->getJob->salary}} Monthly</span>
-								<span>Contract : {{$job->getJob->contract_time}} Year(s)</span>
+								<span class="job_company">Company: {{$job->company_name}}</span>
+								<span><i class="fa fa-map-marker"></i> {{$job->country}}</span>
+								<p>Job Category: {{$job->navigation->caption}}
+								<span class="job_company">Salary : Rs. {{$job->salary}} Monthly</span>
+								<span>Contract : {{$job->contract_time}} Year(s)</span>
 								<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
 							</div>
 						@endforeach
