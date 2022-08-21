@@ -10,14 +10,14 @@
 	else{
 		$seo = $global_setting;
 	}
-
+	dd($global_setting)
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
 			        <!-----SEO--------->
 
-  <title>{{$seo->page_titile ?? ''}}</title>
+  <title>{{$seo->page_titile ?? $global_setting->page_title}}</title>
   <meta name="title" content="{{$seo->page_titile ?? $global_setting->page_title}}">
   <meta name="description" content="{{$seo->page_description ?? $global_setting->page_description}}">
   <meta name="keywords" content="{{$seo->page_keyword ?? $global_setting->page_keyword}}">
