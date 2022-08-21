@@ -2,6 +2,7 @@
 			<!-- Wrapper for Slides -->
 			<div class="carousel-inner">
 				<!---start--->
+				{{dd($jobs)}}
 				@foreach($sliders as $slider)
 				<div class="item active">
 					<!-- Set the first background image using inline CSS below. -->
@@ -11,7 +12,7 @@
 								<div class="row">
 									<div class="banner-text al-left pos-left light">
 										<h2>{{$slider->caption}}<strong>.</strong></h2>
-										<p>{{$slider->	short_content}}</p>
+										<p>{{$slider->short_content}}</p>
 									</div>
 								</div>
 							</div>
