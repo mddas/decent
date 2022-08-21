@@ -7,10 +7,6 @@
     elseif(isset($job)){
         $seo = $job;
     }
-	else{
-		$seo = $global_setting;
-	}
-	dd($global_setting)
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
