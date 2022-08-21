@@ -4,6 +4,7 @@
 				<h2 class="heading-section">New Demand</h2>
 			<div class="row">
 				<!----start--->
+				@if($jobs!=null)
 				@foreach($jobs as $job)
 				<div class="col-sm-12">
 					<div class="job-detail">
@@ -40,6 +41,7 @@
 					</div>
 				</div>
 				@endforeach
+				@endif
 				<!----close---->
 			</div>
 		</div>
