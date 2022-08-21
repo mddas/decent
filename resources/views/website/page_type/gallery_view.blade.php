@@ -18,45 +18,69 @@
 			============================================== 
 			-->
 			@if(isset($photos))
-			<section class="section-spacing">
-				<div class="container">
-					<div class="gallery-view">
-		                <div class="row" id="lightgallery"> 
-							<!----gallary data----->
-							@foreach($photos as $photo)
-								<div class="item col-md-3" data-src="/uploads/photo_gallery/{{$photo->file}}" data-sub-html="{{$photo->caption}}">
-									<h5>sdsjasdad lajsld</h5>
-									<a href="">
-										<img src="/uploads/photo_gallery/{{$photo->file}}" alt="{{$photo->caption}}"/>
-										<div class="gallery-overlay"><img src="/website/images/plus.png"></div>
-									</a>
-								</div>
-							@endforeach
-						  <!----gallary data close----->
-		                </div>
-		            </div>
-          		</div>
-			</section>
+				<!-- Content Section -->
+	<div class="section section-contents section-pad">
+		<div class="container">
+			<div class="content row">
+				<!-- Gallery  -->
+				<div class="gallery gallery-col3 gallery-grids gallery-lightbox hover-fade">
+					<ul class="gallery-list">
+						<li>
+							<a href="image/gallery/g1-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g1-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g2-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g2-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g1-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g1-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g2-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g2-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g1-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g1-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g2-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g2-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g1-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g1-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g2-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g2-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+						<li>
+							<a href="image/gallery/g1-lg.jpg">
+							<div class="gallery-item"><img src="image/gallery/g1-lg.jpg" alt="Nature"></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- Gallery #end -->
+			</div>
+		</div>		
+	</div>
+	<!-- End Section -->
 		  @endif
-		  
-		  <!-- <script>
-			  // $('#lightgallery').html('')
-			
-			  $.ajax({  
-				type: 'GET',  
-				url: '/get_gallery_photos', 
-				data: { slug: "$slug" },
-				success: function(data) {
-					$.each( data, function( key, value ) {
-							$('#lightgallery').append('<div class="item col-md-3" data-src="/uploads/photo_gallery/'+value['file']+'" data-sub-html="'+value['name']+'">\
-									<a href="">\
-										<img src="/uploads/photo_gallery/'+value['file']+'" alt="'+value['name']+'"/>\
-										<div class="gallery-overlay"><img src="/website/images/home/plus.png"></div>\
-									</a>\
-								</div>')
-						});
-				}
-			});
-	    </script> -->
+	 	<script src="js/jquery.bundle.js"></script>
+		<!-- Theme Script init() -->
+		<script src="js/script.js"></script>
+		<!-- End script -->
     @endsection
     

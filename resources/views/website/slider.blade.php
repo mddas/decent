@@ -38,38 +38,26 @@
 		    <!-- End Brochure section-->
 
 		    <!-- Job Highlight section-->
+			@if(isset($jobs))
 		    <div class="job-highlight">
 		        <div class="job-detail">
 		        	<div class="owl-carousel loop job-carousel">
-						<div class="text">
-							<h6>Helper Urgently Needed</h6>
-							<span class="job_company">Company: Hotel Habibi</span>
-							<span><i class="fa fa-map-marker"></i> Dubai</span>
-							<p>Job Category Hotel / Resort</p>
-							<span class="job_company">Salary : $ 600 Monthly</span>
-							<span>Contract : 2 Year(s)</span>
-							<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
-						</div>
-						<div class="text">
-							<h6>Helper Urgently Needed</h6>
-							<span class="job_company">Company: Hotel Habibi</span>
-							<span><i class="fa fa-map-marker"></i> Dubai</span>
-							<p>Job Category Hotel / Resort</p>
-							<span class="job_company">Salary : $ 600 Monthly</span>
-							<span>Contract : 2 Year(s)</span>
-							<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
-						</div>
-						<div class="text">
-							<h6>Helper Urgently Needed</h6>
-							<span class="job_company">Company: Hotel Habibi</span>
-							<span><i class="fa fa-map-marker"></i> Dubai</span>
-							<p>Job Category Hotel / Resort</p>
-							<span class="job_company">Salary : $ 600 Monthly</span>
-							<span>Contract : 2 Year(s)</span>
-							<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
-						</div>
+						@foreach($jobs as $job)					
+							<div class="text">
+								<h6>Helper Urgently Needed</h6>
+								<span class="job_company">Company: {{$job->getJob->company_name}}</span>
+								<span><i class="fa fa-map-marker"></i> {{$job->getJob->country}}</span>
+								<p>Job Category: {{$job->parents->caption}}
+								<span class="job_company">Salary : Rs. {{$job->getJob->salary}} Monthly</span>
+								<span>Contract : {{$job->getJob->contract_time}} Year(s)</span>
+								<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
+							</div>
+						@endforeach
 					</div>
 				</div>
 		    </div>
+
+			@endif
+
 		    <!-- End Highlight section-->
 		</div>

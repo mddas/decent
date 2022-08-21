@@ -1,51 +1,74 @@
 @extends("layouts.master")
+   @section('slider')
+	    @include("website.banner")
+    @endsection
    @section('content')
-    <section class="section breadcrumb-modern context-dark parallax-container"
-     style="background-image:   linear-gradient(
-                  rgba(27, 40, 92, 0.7),
-                  rgba(28, 35, 61, 0.7)
-                ) ,url(images/about/aboutus.jpeg)">
-      <div class="parallax-content section-30 section-sm-70">
-        <div class="shell">
-          <h2 class="veil reveal-sm-block">{{$normal->caption}}</h2>
+   	<div class="section section-contents section-pad about-sec">
+		<div class="container">
+			<div class="content row row-vm">
 
-          <ul class="list-inline list-inline-lg list-inline-dashed p">
-            <li><a href="#">{{$slug1 ?? ''}}</a></li>
-            <li>{{$slug_detail->nav_name ?? ''}}</li>
-          </ul>
+				<div class="col-sm-7 pad-r res-m-bttm">
+					<h2 class="heading-lg">About Us</h2>
+					
+					<p><strong>Decent Employment (P) Ltd.</strong> is a venturae started by professionals having decade of experience in the field. Our mission is to provide smooth recruitment service experience for the Employer Company and the Employee. We have designed best processes and policies to avoid malpractices and serve to the best satisfaction of client and candidates.</p>
+					<p>We are registered and approved recruiting company by Nepal Government having <strong>Recruitment License Number 904/067/68.</strong></p>
+					<p>We have a team of best experienced peoples at varies sectors and fields which makes us capable for handling recruitment process for different sector.</p>
+					<p><strong>We provide full range of recruitment service to our customers:</strong></p>
+					<ul>
+						<li>Vacancy announcement through various appropriate means.</li>
+						<li>Sourcing right Candidates</li>
+						<li>Selecting the right Candidates for the jobs</li>
+						<li>Training Services as required through our associates</li>
+						<li>All government related immigration services</li>
+						<li>Travel Arrangements</li>
+						<li>Hotel Booking and other travels services as and when required.</li>
+					</ul>
+				</div>
+				<div class="col-sm-5">
+					<img alt="" src="image/photo-sm-a.jpg">
+				</div>
 
-        </div>
-      </div>
-    </section>
-    <section class="section novi-background bg-cover section-70 section-md-114 bg-default">
-      <div class="shell">
-        <div class="range range-50 text-sm-left range-sm-middle range-sm-justify">
-          <div class="cell-sm-5 cell-md-4  sideMenuWrapper">
-            <!-- <h3>Side Bar Navigation</h3>
-            <div class="subMenuContainer">
-              <ul>
-                <li><a href="message-from-director.html">Message From Director</a></li>
-                <li><a href="mission.html">Mission/Vision</a></li>
-                <li><a href="why-fortune.html">Why Fortune ?</a></li>
-              </ul>
+			</div>
+		</div>
+	</div>
+  <!---temp start-->
+    <!-- Testimonials -->
+	<div class="section section-quotes section-pad bg-light">
+		<div class="container">
+			<div class="content row">
+			
+				<div class="col-md-offset-2 col-md-8 center">
+					<h2 class="heading-lg">Message From Chairman</h2>
+				</div>
+				<div class="gaps"></div>
+				<div class="testimonials">
+					<div class="quotes-slider quotes-boxed col-md-8 col-md-offset-2">
 
-            </div> -->
-            <img
-              src="{{$normal->banner_image}}"
-              alt="">
-          </div>
-          <div class="cell-sm-7 cell-md-7 cell-sm-push-1">
-            <h3 class="text-bold">{{$normal->caption}}</h3>
-            <hr class="divider bg-madison hr-sm-left-0" />
-            <div class="offset-top-30 offset-md-top-30">
-              <p>
-                 @php echo $normal->long_content; @endphp
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+							<div class="item">
+								<!-- Each Quotes -->
+								<div class="quotes">
+									<div class="quotes-text center">
+										<p>Decent Employment (P) Ltd. is a venture started by professionals having decade of experience in the field. Our mission is to provide smooth recruitment service experience for the Employer Company and the Employee.</p>
+									</div>
+									<div class="profile">
+										<img src="image/profile-img.jpg" alt="">
+										<h5>Full Name</h5>
+										<h6>Chairman, Decent Empolyment PVT. LTD.</h6>
+									</div>
+								</div>
+								<!-- End Quotes -->
+							</div>
+							<!-- End Slide -->
+						<!-- End Slide -->
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Section -->
+
+  <!----temp close----->
   @endsection
 
 
