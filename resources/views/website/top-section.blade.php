@@ -12,9 +12,9 @@
 						</div>
 					</div>
 					<!---start----->
+					@foreach($job_categories as $cat)
 					<div class="col-md-3 col-sm-4 col-xs-6 even">
-						<!-- job box -->
-						@foreach($job_categories as $cat)
+						<!-- job box -->						
 						<div class="feature">
 							<a href="#">
 								<div class="fbox-photo">
@@ -29,10 +29,9 @@
 								</div>
 							</a>
 						</div>
-						@endforeach
 						<!-- End job box -->
 					</div>
-					
+					@endforeach
 					<!----close--->
 					
 					<div class="view-job">
