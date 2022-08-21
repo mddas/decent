@@ -29,9 +29,10 @@
 								</div>
 							</a>
 						</div>
+						@endforeach
 						<!-- End job box -->
 					</div>
-					@endforeach
+					
 					<!----close--->
 					
 					<div class="view-job">
