@@ -17,7 +17,7 @@
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
 									<span><i class="fa fa-map-marker"></i>{{$job->getJob->country}}</span>
-									<p>Job Category {{$job->parents->caption}}</p>
+									<p>Job Category {{$job->parents->caption ?? ''}}</p>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
