@@ -99,12 +99,13 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="/">Home</a></li>
 						@foreach($menus as $menu)
-						<li class="dropdown"><a href="{{$menu->nav_name}}">{{$menu->caption}}<b class="caret"></b></a>
-							@foreach($menu->childs as $submenu)
+							@php $submenus = $menu->childs; @endphp
+						<li class="dropdown"><a href="{{$menu->nav_name}}">{{$menu->caption}}<b class="caret"></b></a>							
 							<ul class="dropdown-menu">
-								<li><a href="/{{$menu->nav_name}}/{{$submenu->nav_name}}">{{$submenu->caption}}</a></li>
-							</ul>
-							@endforeach
+								@foreach($submenus as $submenu)
+									<li><a href="/{{$menu->nav_name}}/{{$submenu->nav_name}}">{{$submenu->caption}}</a></li>
+								@endforeach
+							</ul>							
 						</li>
 						@endforeach
 						<li class="quote-btn"><a class="btn" href="apply-form.html">Apply NoW</a></li>
