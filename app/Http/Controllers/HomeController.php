@@ -215,8 +215,7 @@ class HomeController extends Controller
             return view("website.page_type.normal")->with(['message'=>$message,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($category_type == "Client"){
-            $client_id = Navigation::query()->where('parent_page_id',$category_id)->latest()->get();
-            $clients = Navigation::find($client_id);
+            $clients = Navigation::query()->where('parent_page_id',$category_id)->latest()->get(); 
             return view("website.page_type.client")->with(['clients'=>$clients,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         else{
