@@ -206,11 +206,7 @@ class HomeController extends Controller
             return view("website.page_type.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($category_type == "Service"){
-            // return "return to view Notice";
-            $service_id = Navigation::query()->where('parent_page_id',$category_id)->latest()->get();
-            $services = Navigation::find($service_id);
-            // return $notice_heading;
-            //return $notice_heading;
+            $services = Navigation::query()->where('parent_page_id',$category_id)->latest()->get();      
             return view("website.page_type.service")->with(['services'=>$services,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($category_type == "Normal"){
