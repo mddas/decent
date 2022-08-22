@@ -219,12 +219,11 @@ class HomeController extends Controller
             return view("website.page_type.client")->with(['clients'=>$clients,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         else{
-            if($jobs!=null){            
-                 return view("website.page_type.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
-            }
-            else{
+            // if($jobs!=null){            
+            //      return view("website.page_type.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            // }
                 return redirect('/');
-            }
+  
         }
 
     }
