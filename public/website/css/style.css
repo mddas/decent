@@ -3138,6 +3138,51 @@ form label.error {
 .testimonials-list .quotes .profile {
   text-align: left;
 }
+.recruitment-list{
+  position: relative;
+}
+.recruitment-list li{
+  position: relative;
+  min-height: 65px;
+  padding: 20px 10px 5px;
+  border-bottom: 4px solid #f4f8f8;
+  margin-bottom: 25px;
+  padding-left: 60px;
+  padding-right: 45px;
+}
+.recruitment-list li:before{
+  content: '';
+  position: absolute;
+  right: 20px;
+  border-right: 5px solid #22669e;
+  bottom: -6px;
+  height: 45px;
+  transform: rotate(331deg);
+  z-index: -1;
+}
+.recruitment-list li span{
+  position: absolute;
+  border: 4px solid #22669e;
+  border-radius: 50%;
+  bottom: -5px;
+  left: -15px;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.recruitment-list li:nth-child(even){
+    margin-left: 20px;
+  
+}
+.recruitment-list li:nth-child(even):before{
+    border-right: 6px solid #a8872d;
+}
+.recruitment-list li:nth-child(even) span{
+    border: 4px solid #a8872d;
+}
 
 /* ========================================================================== 10.0 Client Logo ========================================================================== */
 .logo-item {
