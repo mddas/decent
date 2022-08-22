@@ -67,7 +67,7 @@
 						</li>
 						<li class="t-phone t-phone1">
 							<em class="fa fa-whatsapp" aria-hidden="true"></em>
-							<span><a href="https://wa.me/196565751161" target="_blank">+965-65751161</a></span>
+							<span><a href="https://wa.me/196565751161" target="_blank">{{$global_setting->phone}}</a></span>
 						</li>
 					</ul>
 				</div>
