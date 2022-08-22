@@ -3,8 +3,8 @@
 			<div class="carousel-inner">
 				<!---start--->
 	
-				@foreach($sliders as $slider)
-				<div class="item active">
+				@foreach($sliders as $key=>$slider)
+				<div class="item @if($key==0) active @endif">
 					<!-- Set the first background image using inline CSS below. -->
 					<div class="fill" style="background-image:url('{{$slider->banner_image}}');">
 						<div class="banner-content">
