@@ -63,7 +63,7 @@
 					<ul class="top-contact clearfix">
 						<li class="t-email t-email1">
 							<em class="fa fa-envelope-o" aria-hidden="true"></em>
-							<span><a href="mailto:info@decentemployment.com.np">info@decentemployment.com.np</a></span>
+							<span><a href="mailto:{{$global_setting->site_email}}">{{$global_setting->site_email}}</a></span>
 						</li>
 						<li class="t-phone t-phone1">
 							<em class="fa fa-whatsapp" aria-hidden="true"></em>
