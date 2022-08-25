@@ -165,10 +165,9 @@
 							<h5 class="wgs-title">Quick Links</h5>
 							<div class="wgs-content">
 								<ul class="menu">
-									<li><a href="inner.html">About Us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="contact.html">Contact Us</a></li>
+								  @foreach($menus as $menu)
+									<li><a href="{{$menu->nav_name}}">{{$menu->caption}}</a></li>
+								  @endforeach
 								</ul>
 							</div>
 						</div>
@@ -180,15 +179,13 @@
 						<div class="wgs wgs-footer">
 							<h5 class="wgs-title">Get In Touch</h5>
 							<div class="wgs-content">
-								<p>
-									Sunder Nagar Marg-3<br>
-									Basundhara, Kathmandu</p>
-								<p><span>Mail</span>: <a href="mailto:info@decentemployment.com.np">info@decentemployment.com.np</a></p>
-								<p><span>Phone</span>: <a href="tel:97714385804">+977-14385804</a><br> <a href="tel:9779857089191">+977-9857089191</a></p>
+								<p>{{$global_setting->website_full_address}}</p>
+								<p><span>Mail</span>: <a href="mailto:{{$global_setting->site_email}}">{{$global_setting->site_email}}</a></p>
+								<p><span>Phone</span>: <a href="tel:{{$global_setting->phone}}">{{$global_setting->phone}}</a><br> <a href="tel:{{$global_setting->phone_ne}}">{{$global_setting->phone_ne}}</a></p>
 								<ul class="social">
-									<li><a href="#"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
-									<li><a href="#"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
-									<li><a href="#"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
+									<li><a href="{{$global_setting->facebook}}"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
+									<li><a href="{{$global_setting->twitter}}"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
+									<li><a href="{{$global_setting->LinkedIn}}"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
 								</ul>
 							</div>
 						</div>
