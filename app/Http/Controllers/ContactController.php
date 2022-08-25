@@ -62,7 +62,7 @@ class ContactController extends Controller
         else{
             $contacts = null;
         }
-        //return $contacts;
+
        //$job =Navigation::all()->where('nav_name',$slug)->first();     
         $slug_detail = Navigation::all()->where('nav_name','contact')->first();   
         $global_setting = GlobalSetting::all()->first(); 
