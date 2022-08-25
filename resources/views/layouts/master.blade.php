@@ -97,10 +97,10 @@
 			   
 				<nav class="navbar-collapse collapse" id="mainnav">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="/">Home</a></li>
+						<li class="@if(!isset($slug_detail)) active @endif"><a href="/">Home</a></li>
 						@foreach($menus as $menu)
 							@php $submenus = $menu->childs; @endphp
-						<li class="dropdown"><a href="{{$menu->nav_name}}">{{$menu->caption}} @if($menu->page_type=="Group") <b class="caret"></b>@endif</a>							
+						<li class="dropdown @if(isset($slug_detail)==True && $slug_detail->nav_name == $menu->nav_name) active @endif"><a href="{{$menu->nav_name}}">{{$menu->nav_name}} @if($menu->page_type=="Group") <b class="caret"></b>@endif</a>							
 							<ul class="dropdown-menu">
 								@foreach($submenus as $submenu)
 									<li><a href="/{{$menu->nav_name}}/{{$submenu->nav_name}}">{{$submenu->caption}}</a></li>
