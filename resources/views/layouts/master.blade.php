@@ -100,15 +100,17 @@
 						<li class="active"><a href="/">Home</a></li>
 						@foreach($menus as $menu)
 							@php $submenus = $menu->childs; @endphp
-					    @if($menu->page_type=="Group")
-							<li class="dropdown"><a href="{{$menu->nav_name}}">{{$menu->caption}}<b class="caret"></b></a>							
+					    
+							<li class="dropdown"><a href="{{$menu->nav_name}}">{{$menu->caption}}<b class="caret"></b></a>
+							  @if($menu->page_type=="Group")						
 								<ul class="dropdown-menu">
 									@foreach($submenus as $submenu)
 										<li><a href="/{{$menu->nav_name}}/{{$submenu->nav_name}}">{{$submenu->caption}}</a></li>
 									@endforeach
-								</ul>							
+								</ul>
+							 @endif							
 							</li>
-						@endif
+						
 						@endforeach
 						<li class="quote-btn"><a class="btn" href="apply-form.html">Apply NoW</a></li>
 					</ul>
