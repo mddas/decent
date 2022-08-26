@@ -3631,7 +3631,7 @@ form label.error {
   position: relative;
   border: 1px solid #ebefef;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
 }
 .job-detail:hover {
@@ -3677,6 +3677,13 @@ form label.error {
 .job-detail .btn-outline:hover {
   background: #22669e;
   color: #fff;
+}
+.job-detail .btn-outline.apply-button {
+  margin-bottom: 10px;
+}
+.job-detail figure img{
+  max-width: 250px;
+  margin-bottom: 10px;
 }
 .home-job .job-detail {
   background: #fff;
@@ -6401,4 +6408,32 @@ div[class*="filtered-menu"].style-v2 li:last-child {
 .job-highlight .job-detail .btn-outline {
   border: 1px solid #fff;
   color: #fff;
+}
+.job-detail ul li {
+  display: inline-block;
+  margin-right: -5px !important;
+  margin: 0;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ebebeb;
+  font-size: 14px;
+  color: #40454b;
+  width: 33%;
+}
+.job-detail ul li span {
+  font-size: 14px;
+  color: #001648;
+}
+.job-detail ul li:nth-child(even) {
+  background: #f4f8f8;
+}
+@media only screen and (max-width: 991px) {
+  .job-detail ul li {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .job-detail ul li {
+    width: 100%;
+  }
 }

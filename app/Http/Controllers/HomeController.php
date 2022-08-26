@@ -219,21 +219,24 @@ class HomeController extends Controller
             return view("website.page_type.client")->with(['clients'=>$clients,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         else{
+
                 $men_detail = Navigation::where('nav_name',$menu)->first();
-                $menu_childs = $men_detail->childs;
-                $total_Category = $menu_childs->count();
-                $category_count = $menu_childs->where('banner_image','!=',null)->count();
-                if($category_count==0){
-                    return redirect('/');
-                }
-                $per = ($category_count/$total_Category)*100;
-                if($per>50){
-                    $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
-                    return view('website.job-category')->with('job_categories',$job_categories);
-                }
-                else{
-                    return redirect('/');
-                }              
+                if($men_detail!=null){
+                    $menu_childs = $men_detail->childs;
+                    $total_Category = $menu_childs->count();
+                    $category_count = $menu_childs->where('banner_image','!=',null)->count();
+                    if($category_count==0){
+                        return redirect('/');
+                    }
+                    $per = ($category_count/$total_Category)*100;
+                    if($per>50){
+                        $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
+                        return view('website.job-category')->with('job_categories',$job_categories);
+                    }
+                }  
+               else{
+                        return redirect('/');
+                    }            
         }
 
     }
@@ -386,7 +389,7 @@ class HomeController extends Controller
         }      
         $global_setting = GlobalSetting::all()->first(); 
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
-        return view("website.job_detail_single_page")->with(["services"=>$services,'job'=>$job,'menus'=>$menus,'global_setting'=>$global_setting]);
+        return view("website.job_detail")->with(["services"=>$services,'job'=>$job,'menus'=>$menus,'global_setting'=>$global_setting]);
     }
     public function ReadMore($slug){
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()!=null){

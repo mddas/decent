@@ -22,7 +22,8 @@
 									<div class="text">
 										<span class="job_company">Salary : $ 600 Monthly</span>
 										<span>Contract : 2 Year(s)</span>
-										<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
+										<a href="#" class="btn btn-outline" target="_blank">Apply Now</a>
+										<a href="/job-detail/{{$job->id}}" class="btn btn-outline" target="_blank">View Detail</a>
 									</div>
 								</div>
 							</div>

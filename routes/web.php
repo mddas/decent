@@ -102,7 +102,7 @@ Route::get('/all-jobs',[HomeController::class,'allJobs'])->name('allJobs');
 Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
 
 Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
-Route::get('/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
+Route::get('/job-detail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
 Route::get('/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
 Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
 Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('contactstore');

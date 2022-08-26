@@ -29,12 +29,12 @@
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
 								<div class="text">
-									<a href="apply-form.html" class="btn btn-outline" target="_blank">View Detail</a>
+									<a href="{{route('single_job',$job->id)}}" class="btn btn-outline" target="_blank">View Detail</a>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
 								<div class="text">
-									<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
+									<a href="#" class="btn btn-outline" target="_blank">Apply Now</a>
 								</div>
 							</div>
 						</div>
