@@ -219,9 +219,6 @@ class HomeController extends Controller
             return view("website.page_type.client")->with(['clients'=>$clients,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         else{
-            // if($jobs!=null){            
-            //      return view("website.page_type.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
-            // }
                 $men_detail = Navigation::where('nav_name',$menu)->first();
                 $menu_childs = $men_detail->childs;
                 $total_Category = $menu_childs->count();
@@ -352,9 +349,7 @@ class HomeController extends Controller
             return view("website.page_type.video_gallery")->with(["services"=>$services,'photos'=>$photos,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Job"){
-            //return "return to view job";
-            $jobs = Navigation::where('parent_page_id',$subcategory_id);
-            return $jobs;
+            $jobs = Navigation::where('parent_page_id',$subcategory_id)->get();
             return view("website.page_type.job-list")->with(["services"=>$services,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Service"){
