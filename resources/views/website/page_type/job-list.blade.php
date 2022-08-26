@@ -12,8 +12,8 @@
 							<div class="row">
 								<div class="col-md-6 res-m-bttm-sm">
 									<div class="text">
-										<h6>{{$job}}</h6>
-										<span class="job_company">Company: {{$job}}</span>
+										<h6>{{$job->caption}}title</h6>
+										<span class="job_company">Company: {{$job->getJob->company_name}}</span>
 										<span><i class="fa fa-map-marker"></i> Dubai</span>
 										<p>Job Category Hotel / Resort</p>
 									</div>

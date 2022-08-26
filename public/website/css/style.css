@@ -556,7 +556,7 @@ input:focus {
 .section-pad.nopd-t {
   padding-top: 0;
 }
-.mar-t150{
+.mar-t150 {
   margin-top: 133px;
 }
 .pad-0,
@@ -1580,8 +1580,8 @@ form label.error {
   display: block;
   line-height: 1.4;
 }
-.service-box{
-    margin-bottom: 10px;
+.service-box {
+  margin-bottom: 10px;
 }
 .icon-box {
   width: 48px;
@@ -1670,10 +1670,10 @@ form label.error {
 .icon-box + h3 {
   margin-top: 10px;
 }
-.icon-box + h4{
-	font-size: 16px;
-	line-height: 20px;
-	min-height: 50px;
+.icon-box + h4 {
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 50px;
 }
 .icon-box span.icon {
   vertical-align: middle;
@@ -1893,7 +1893,7 @@ form label.error {
   padding: 5px 7px;
   border-radius: 5px;
 }
-.apply-body .topbar .social li a{
+.apply-body .topbar .social li a {
   color: #22669e;
 }
 .top-nav {
@@ -2096,7 +2096,7 @@ form label.error {
 .navbar-nav .dropdown-menu.active > a,
 .navbar-nav .dropdown-menu li > a:hover,
 .navbar-nav .dropdown-menu li > a:focus {
-   color: #22669E
+  color: #22669e;
 }
 .navbar-nav .dropdown-menu > .active > a,
 .navbar-nav .dropdown-menu > .active > a:focus,
@@ -2480,7 +2480,7 @@ form label.error {
   text-align: center;
   padding: 5px 0;
 }
-.banner-static .banner-cpn.bg-light{
+.banner-static .banner-cpn.bg-light {
   background: #f4f8f8;
 }
 .banner-static .banner-cpn .content {
@@ -2537,8 +2537,7 @@ form label.error {
   min-height: 400px;
   position: relative;
 }
-.is-transparent .banner-static:
-.banner-static.has-bg-image .container {
+.is-transparent.banner-static: .banner-static.has-bg-image .container {
   position: static;
 }
 
@@ -2886,18 +2885,18 @@ form label.error {
 .content-box h5 + ul {
   margin-top: -5px;
 }
-.about-sec p{
+.about-sec p {
   text-align: justify;
 }
 .about-sec ul,
-.about-sec li{
+.about-sec li {
   list-style: initial;
 }
-.about-sec ul{
+.about-sec ul {
   padding-left: 12px;
 }
 /* ========================================================================== 7.0 Forms Style ========================================================================== */
-.apply-form{
+.apply-form {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
@@ -2905,10 +2904,10 @@ form label.error {
   padding: 40px;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 8%);
 }
-.apply-form h3{
+.apply-form h3 {
   color: #22669e;
 }
-.apply-form label{
+.apply-form label {
   font-size: 12px;
   color: #22669e;
   font-weight: 600;
@@ -3138,10 +3137,10 @@ form label.error {
 .testimonials-list .quotes .profile {
   text-align: left;
 }
-.recruitment-list{
+.recruitment-list {
   position: relative;
 }
-.recruitment-list li{
+.recruitment-list li {
   position: relative;
   min-height: 65px;
   padding: 20px 10px 5px;
@@ -3150,8 +3149,8 @@ form label.error {
   padding-left: 60px;
   padding-right: 45px;
 }
-.recruitment-list li:before{
-  content: '';
+.recruitment-list li:before {
+  content: "";
   position: absolute;
   right: 20px;
   border-right: 5px solid #22669e;
@@ -3160,7 +3159,7 @@ form label.error {
   transform: rotate(331deg);
   z-index: -1;
 }
-.recruitment-list li span{
+.recruitment-list li span {
   position: absolute;
   border: 4px solid #22669e;
   border-radius: 50%;
@@ -3173,15 +3172,14 @@ form label.error {
   font-size: 18px;
   font-weight: bold;
 }
-.recruitment-list li:nth-child(even){
-    margin-left: 20px;
-  
+.recruitment-list li:nth-child(even) {
+  margin-left: 20px;
 }
-.recruitment-list li:nth-child(even):before{
-    border-right: 6px solid #a8872d;
+.recruitment-list li:nth-child(even):before {
+  border-right: 6px solid #a8872d;
 }
-.recruitment-list li:nth-child(even) span{
-    border: 4px solid #a8872d;
+.recruitment-list li:nth-child(even) span {
+  border: 4px solid #a8872d;
 }
 
 /* ========================================================================== 10.0 Client Logo ========================================================================== */
@@ -3629,7 +3627,7 @@ form label.error {
   color: #595959;
 }
 /*===================Job Detail=================================*/
-.job-detail{
+.job-detail {
   position: relative;
   border: 1px solid #ebefef;
   border-radius: 5px;
@@ -3637,63 +3635,63 @@ form label.error {
   margin-bottom: 10px;
 }
 .job-detail:hover {
-    -webkit-box-shadow: 0 0 30px rgb(0 0 0 / 10%);
-    -moz-box-shadow: 0 0 30px rgba(0,0,0,.1);
-    -ms-box-shadow: 0 0 30px rgba(0,0,0,.1);
-    -o-box-shadow: 0 0 30px rgba(0,0,0,.1);
-    box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+  -webkit-box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgb(0 0 0 / 10%);
 }
-.job-detail .text h6{
-    font-size: 13px;
-    font-weight: 600;
-    color: #001648;
-    margin: 3px 0 7px;
+.job-detail .text h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #001648;
+  margin: 3px 0 7px;
 }
-.job-detail .text span{
-    padding-top: 5px;
-    font-size: 13px;
-    text-align: left;
-    margin-bottom: 5px;
-    color: #888;
-    display: block;
+.job-detail .text span {
+  padding-top: 5px;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #888;
+  display: block;
 }
-.job-detail .text span i{
+.job-detail .text span i {
   margin-right: 5px;
 }
-.job-detail .text span.job_company{
+.job-detail .text span.job_company {
   display: block;
   margin: 0;
   padding: 0;
   color: #001648;
 }
-.job-detail .text p{
+.job-detail .text p {
   font-size: 14px;
   color: #001648;
 }
-.job-detail .btn-outline{
+.job-detail .btn-outline {
   padding: 5px 10px;
   border: 1px solid #22669e;
   color: #22669e;
   font-size: 10px;
 }
-.job-detail .btn-outline:hover{
+.job-detail .btn-outline:hover {
   background: #22669e;
   color: #fff;
 }
-.home-job .job-detail{
+.home-job .job-detail {
   background: #fff;
 }
-.home-job .job-detail .row{
+.home-job .job-detail .row {
   display: flex;
   align-items: center;
 }
-.home-job .job-detail .text h6{
-  color: #22669e
+.home-job .job-detail .text h6 {
+  color: #22669e;
 }
-.home-job .job-detail .text span.job_company{
+.home-job .job-detail .text span.job_company {
   color: #000000;
 }
-.home-job .job-detail .btn-outline{
+.home-job .job-detail .btn-outline {
   padding: 10px 30px;
 }
 /* ========================================================================== 13.0 Blog / News ========================================================================== */
@@ -3909,17 +3907,17 @@ form label.error {
 }
 
 /* ========================================================================== 15.0 Feature Box css ========================================================================== */
-.section-services .col-md-3{
+.section-services .col-md-3 {
   width: 20%;
 }
 .feature-row:first-child,
 .feature-row.mgfix {
   margin-top: -60px;
 }
-.job-sec .feature-row:first-child{
+.job-sec .feature-row:first-child {
   margin-top: 0;
 }
-.job-sec .feature{
+.job-sec .feature {
   margin-top: 0;
 }
 .feature-row.mgno,
@@ -3973,7 +3971,7 @@ form label.error {
   margin-top: 10px;
   font-size: 0.875em;
 }
-.feature-s4 .feature .fbox-over p{
+.feature-s4 .feature .fbox-over p {
   font-size: 12px;
   margin-bottom: 15px;
 }
@@ -4455,13 +4453,13 @@ a:hover > .feature.boxed {
 .feature-imagebox.border.dark {
   border: 1px solid #000;
 }
-.view-job{
-	position: relative;
+.view-job {
+  position: relative;
   text-align: center;
   clear: both;
 }
-.view-job .btn{
-	margin-top: 30px;
+.view-job .btn {
+  margin-top: 30px;
 }
 .boxed-w {
   background-color: #fff;
@@ -5130,18 +5128,18 @@ div[class*="filtered-menu"].style-v2 li:last-child {
 
 /*====================Apply form=========================*/
 .apply-body .header-s1.is-transparent .topbar,
-.apply-body .header-s1.is-transparent .topbar + .navbar{
+.apply-body .header-s1.is-transparent .topbar + .navbar {
   background: #fff;
 }
 .apply-body .navbar-nav > li > a,
 .apply-body .topbar .top-contact span,
-.apply-body .header-s1.is-transparent .top-contact .fa{
+.apply-body .header-s1.is-transparent .top-contact .fa {
   color: #000;
 }
 .apply-body .navbar-nav > li > a:hover,
 .apply-body .topbar .top-contact span:hover,
 .header-s1.is-transparent .topbar a:not(.btn):hover,
-.apply-body .header-s1.is-transparent .top-contact .fa:hover{
+.apply-body .header-s1.is-transparent .top-contact .fa:hover {
   color: #22669e !important;
 }
 /* ========================================================================== 18.0 Responsive Style ========================================================================== */
@@ -5558,7 +5556,7 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   .al-left-sm {
     text-align: left;
   }
-  .section-services .col-md-3{
+  .section-services .col-md-3 {
     width: 33%;
   }
 }
@@ -5603,7 +5601,7 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   .row-vm {
     align-items: baseline;
   }
-  .mar-t150{
+  .mar-t150 {
     margin-top: 104px;
   }
 }
@@ -6044,13 +6042,13 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   .gallery-list li {
     padding: 6px;
   }
-  .mar-t150{
+  .mar-t150 {
     margin-top: 57px;
   }
-  .job-highlight{
+  .job-highlight {
     display: none;
   }
-  .home-job .job-detail .row{
+  .home-job .job-detail .row {
     display: block;
   }
 }
@@ -6090,7 +6088,7 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   .gallery.gallery-with-caption[class*="gallery-col"] .gallery-list > li {
     width: 100%;
   }
-  .gallery-col3 .gallery-list > li{
+  .gallery-col3 .gallery-list > li {
     width: 100%;
   }
   div[class*="filtered-menu"] li {
@@ -6349,58 +6347,58 @@ div[class*="filtered-menu"].style-v2 li:last-child {
 /*============================================================
 ======================Brochure================================
 ==============================================================*/
-.brochure{
-    min-width: 200px;
-    background: #22669e;
-    padding: 0px 10px 9px;
-    padding-top: 11px;
-    text-align: center;
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    bottom: 0;
+.brochure {
+  min-width: 200px;
+  background: #22669e;
+  padding: 0px 10px 9px;
+  padding-top: 11px;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
 }
-.brochure a{
-    font-size: 20px;
-    text-transform: capitalize;
-    line-height: 22px;
-    color: #fff;
+.brochure a {
+  font-size: 20px;
+  text-transform: capitalize;
+  line-height: 22px;
+  color: #fff;
 }
-.brochure a i{
-    margin-right: 10px;
+.brochure a i {
+  margin-right: 10px;
 }
 
 /*============================================================
 ====================== Jobhig Hlight ================================
 ==============================================================*/
-.job-highlight{
+.job-highlight {
   position: absolute;
   max-width: 250px;
   z-index: 999;
   right: 1px;
   bottom: 1px;
 }
-.job-highlight .job-detail{
+.job-highlight .job-detail {
   margin: 0;
   padding: 20px;
   border-radius: 0;
   background: #22669e;
 }
-.job-detail .text h6{
+.job-highlight .job-detail .text h6 {
   color: #fff;
 }
 
-.job-highlight .job-detail .text p{
+.job-highlight .job-detail .text p {
   margin-bottom: 0;
   color: #fff;
 }
-.job-highlight .job-detail .text span{
+.job-highlight .job-detail .text span {
   color: #d7bc00;
 }
-.job-detail .text span.job_company{
+.job-highlight .job-detail .text span.job_company {
   color: #ebebeb;
 }
-.job-highlight .job-detail .btn-outline{
+.job-highlight .job-detail .btn-outline {
   border: 1px solid #fff;
   color: #fff;
 }
