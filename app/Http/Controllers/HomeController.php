@@ -353,6 +353,8 @@ class HomeController extends Controller
         }
         elseif($subcategory_type == "Job"){
             //return "return to view job";
+            $jobs = Navigation::where('parent_page_id',$subcategory_id);
+            return $jobs;
             return view("website.page_type.job-list")->with(["services"=>$services,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Service"){
