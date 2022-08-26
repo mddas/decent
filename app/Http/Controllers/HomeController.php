@@ -226,6 +226,9 @@ class HomeController extends Controller
                 $menu_childs = $men_detail->childs;
                 $total_Category = $menu_childs->count();
                 $category_count = $menu_childs->where('banner_image','!=',null)->count();
+                if($category_count==0){
+                    return redirect('/');
+                }
                 $per = ($category_count/$total_Category)*100;
                 if($per>50){
                     $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
@@ -233,11 +236,7 @@ class HomeController extends Controller
                 }
                 else{
                     return redirect('/');
-                }
-                
-                
-               
-  
+                }              
         }
 
     }
