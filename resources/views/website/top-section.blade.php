@@ -12,7 +12,9 @@
 						</div>
 					</div>
 					<!---start----->
+					@php $index = 0; @endphp
 					@foreach($job_categories as $cat)
+						@if($index>=5) @break @endif
 					<div class="col-md-3 col-sm-4 col-xs-6 even">
 						<!-- job box -->						
 						<div class="feature">
@@ -21,7 +23,7 @@
 									<img src="{{$cat->banner_image}}" alt="">
 								</div>
 								<div class="fbox-over">
-									<h3 class="title">{{$cat->caption}}</h3>
+									<h3 class="title">{{$cat->caption}} {{$index}}</h3>
 									<div class="fbox-content">
 										<p>{{$cat->short_content}}</p>
 										<span class="btn">View Job</span>
@@ -31,6 +33,7 @@
 						</div>
 						<!-- End job box -->
 					</div>
+						@php $index++; @endphp
 					@endforeach
 					<!----close--->
 					
