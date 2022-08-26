@@ -3,7 +3,12 @@
 	    @include("website.banner")
     @endsection
    @section('content')
-		@php echo $normal->long_content; @endphp
+   <section class="inner-page">
+      <div class="container">
+            @php echo $normal->long_content; @endphp
+      </div>
+   </section>
+		
   @endsection
 
 

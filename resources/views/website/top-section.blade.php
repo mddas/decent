@@ -18,7 +18,7 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 even">
 						<!-- job box -->						
 						<div class="feature">
-							<a href="#">
+							<a href="/jobcategory/{{$cat->nav_name}}">
 								<div class="fbox-photo">
 									<img src="{{$cat->banner_image}}" alt="">
 								</div>
@@ -38,7 +38,7 @@
 					<!----close--->
 					
 					<div class="view-job">
-						<a href="job-category.html" class="btn">View All</a>
+						<a href="/jobcategory" class="btn">View All</a>
 					</div>				
 				</div>
 				<!-- Job Row  #end -->
