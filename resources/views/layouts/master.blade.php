@@ -7,6 +7,12 @@
     elseif(isset($job)){
         $seo = $job;
     }
+	if(isset($menus)){
+
+	}
+	else{
+		 $menus = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
+	}
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -99,12 +105,15 @@
 					<ul class="nav navbar-nav">
 						<li class="@if(!isset($slug_detail)) active @endif"><a href="/">Home</a></li>
 						@foreach($menus as $menu)
-							@php $submenus = $menu->childs; @endphp
-						<li class="dropdown @if(isset($slug_detail)==True && $slug_detail->nav_name == $menu->nav_name) active @endif"><a href="{{$menu->nav_name}}">{{$menu->nav_name}} @if($menu->page_type=="Group") <b class="caret"></b>@endif</a>							
+							@php
+								 $submenus = $menu->childs;
+							@endphp
+						<li class="dropdown @if(isset($slug_detail)==True && $slug_detail->nav_name == $menu->nav_name) active @endif"><a href="/{{$menu->nav_name}}">{{$menu->nav_name}} @if($menu->page_type=="Group") <b class="caret"></b>@endif</a>							
 							<ul class="dropdown-menu">
-								@foreach($submenus as $submenu)
-									<li><a href="/{{$menu->nav_name}}/{{$submenu->nav_name}}">{{$submenu->caption}}</a></li>
-								@endforeach
+								@foreach($submenus as $key=>$submenu)
+								  @if($key>=4) @break @endif								  
+									<li><a href="/{{$menu->nav_name}}/{{$submenu->nav_name}}">{{$submenu->caption}}</a></li>								  
+								  @endforeach
 							</ul>							
 						</li>
 						@endforeach

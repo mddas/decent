@@ -222,7 +222,20 @@ class HomeController extends Controller
             // if($jobs!=null){            
             //      return view("website.page_type.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
             // }
-                return redirect('/');
+                $men_detail = Navigation::where('nav_name',$menu)->first();
+                $menu_childs = $men_detail->childs;
+                $total_Category = $menu_childs->count();
+                $category_count = $menu_childs->where('banner_image','!=',null)->count();
+                $per = ($category_count/$total_Category)*100;
+                if($per>50){
+                    return view('website.job-category');
+                }
+                else{
+                    return redirect('/');
+                }
+                
+                
+               
   
         }
 
