@@ -108,6 +108,7 @@ class ContactController extends Controller
         $contact->country = $req['country'];
         $contact->save();
         if($contact){
+            return "Form Submitted sucessfully";
             Session::flash('contact', 'Thanks for submitting'); 
             return redirect('/');
         }
@@ -118,6 +119,7 @@ class ContactController extends Controller
 
     }
     public function Destroy($slug){
+        return "form submitted fail";
         $contact = Contact::where('nav_name',$slug)->delete();
         return redirect('/');
     }
