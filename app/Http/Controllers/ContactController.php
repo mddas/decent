@@ -101,6 +101,7 @@ class ContactController extends Controller
         $contact->name = $req['name'];
         $contact->number = $req['number'];
         $contact->email = $req['email'];
+        $contact->subject = $req['subject'];
         $contact->file = $name;
         $contact->message = $req['message'];
         $contact->job_id = $req['job_id'];//job_detail

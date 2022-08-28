@@ -10,27 +10,27 @@
 				<h2 class="heading-lg">Get in Touch</h2>
 				<div class="contact-content row">
 					<div class="drop-message col-md-7 res-m-bttm">
-						<form id="quote-request" class="form-quote" action="form/quote-request.php" method="post">
+						<form id="quote-request" class="form-quote" action="{{route('contactstore')}}" method="POST" enctype='multipart/form-data'>
 								<div class="form-group row">
 									<div class="form-field col-md-6 form-m-bttm">
-										<input name="quote-request-name" type="text" placeholder="Name *" class="form-control required">
+										<input name="name" type="text" placeholder="Name *" class="form-control required" required>
 									</div>
 									<div class="form-field col-md-6">
-										<input name="quote-request-subject" type="text" placeholder="Subject" class="form-control">
+										<input name="subject" type="text" placeholder="Subject" class="form-control">
 									</div>
 								</div>
 								<div class="form-group row">
 									<div class="form-field col-md-6 form-m-bttm">
-										<input name="quote-request-email" type="email" placeholder="Email *" class="form-control required email">
+										<input name="email" type="email" placeholder="Email *" class="form-control required email">
 									</div>
 									<div class="form-field col-md-6">
-										<input name="quote-request-phone" type="text" placeholder="Phone *" class="form-control required">
+										<input name="number" type="text" placeholder="Phone *" class="form-control required" required>
 									</div>
 								</div>
 
 								<div class="form-group row">
 									<div class="form-field col-md-12">
-										<textarea name="quote-request-message" placeholder="Do you have any Queries?" class="txtarea form-control required"></textarea>
+										<textarea name="-message" placeholder="Do you have any Queries?" class="txtarea form-control required"></textarea>
 									</div>
 								</div>
 								<input type="text" class="hidden" name="form-anti-honeypot" value="">
