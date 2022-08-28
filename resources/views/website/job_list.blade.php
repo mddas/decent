@@ -34,7 +34,7 @@
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
 								<div class="text">
-									<a href="{{route('jobapply',$job->parents->nav_name)}}" class="btn btn-outline" target="_blank">Apply Now</a>
+									<a href="{{route('jobapply',$job->parents)}}" class="btn btn-outline" target="_blank">Apply Now</a>
 								</div>
 							</div>
 						</div>
