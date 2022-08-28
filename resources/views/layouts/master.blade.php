@@ -117,7 +117,7 @@
 							</ul>							
 						</li>
 						@endforeach
-						<li class="quote-btn"><a class="btn" href="apply-form.html">Apply NoW</a></li>
+						<li class="quote-btn"><a class="btn" href="/inquiry">Apply NoW</a></li>
 					</ul>
 				</nav>     
 				<!-- #end MainNav -->
