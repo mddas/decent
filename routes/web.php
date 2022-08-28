@@ -105,7 +105,7 @@ Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->
 Route::get('/job-detail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
 Route::get('/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
 Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
-Route::get('contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
+Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
 
 Route::get('/{slug}',[HomeController::class,'category'])->name('category');
 Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');

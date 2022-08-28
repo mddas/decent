@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="apply-form">
 				<h3 class="heading-lg">Apply Form</h3>
-				<form id="quote-request" class="form-quote" action="{{route('contactstore')}}" method="get" enctype='multipart/form-data'>
+				<form id="quote-request" class="form-quote" action="{{route('contactstore')}}" method="POST" enctype='multipart/form-data'>
 					   @csrf
 						<div class="form-group row">
 							<div class="form-field col-md-6 form-m-bttm">
