@@ -1,4 +1,5 @@
 @php
+	$job_categories = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null)->paginate(5);
     $global_setting = app\Models\GlobalSetting::all()->first();
 	$normal_gallary_notice = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
 	if(isset($normal)){
@@ -13,6 +14,7 @@
 	else{
 		 $menus = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
 	}
+	
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -148,7 +150,7 @@
 						<div class="wgs wgs-footer wgs-text">
 							<div class="wgs-content">
 								<p><img src="/website/image/logo-transparent.png" srcset="image/logo2x.png 2x" alt=""></p>
-								<p>We are registered and approved recruiting company by Nepal Government having Recruitment License Number 904/067/68.</p>
+								<p>{{$global_setting->page_description}}</p>
 							</div>
 						</div>
 						<!-- End Widget -->
@@ -159,10 +161,9 @@
 							<h5 class="wgs-title">Jobs</h5>
 							<div class="wgs-content">
 								<ul class="menu">
-									<li><a href="job-list.html">Construction</a></li>
-									<li><a href="job-list.html">Hotel / Resort</a></li>
-									<li><a href="job-list.html">Security Field</a></li>
-									<li><a href="job-list.html">Supermarkets</a></li>
+									@foreach($job_categories as $cat)
+										<li><a href="/{{$cat->nav_name}}">{{$cat->caption}}</a></li>
+									@endforeach
 								</ul>
 							</div>
 						</div>
