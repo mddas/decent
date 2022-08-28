@@ -108,10 +108,10 @@
 						<li class="@if(!isset($slug_detail)) active @endif"><a href="/">Home</a></li>
 						@foreach($menus as $menu)
 							@php
-								 $submenus = $menu->childs;
+								 $submenus = $menu->childs;						 
 			
 							@endphp
-						<li class="dropdown @if(isset($slug_detail)==True && $slug_detail->nav_name == $menu->nav_name) active @endif"><a href="/{{$menu->nav_name}}">{{$menu->nav_name}} @if($menu->page_type=="Group")  <b class="caret"></b> @endif</a>							
+						<li class="dropdown @if(isset($slug_detail)==True && $slug_detail->nav_name == $menu->nav_name) active @endif"><a href="/{{$menu->nav_name}}">{{$menu->nav_name}}@if($submenus->count()>0) @if($menu->page_type=="Group") @endif <b class="caret"></b> @endif</a>							
 							<ul class="dropdown-menu">
 								@foreach($submenus as $key=>$submenu)
 								  @if($key>=4) @break @endif								  
