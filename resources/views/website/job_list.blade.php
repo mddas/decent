@@ -18,7 +18,7 @@
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
 									<span><i class="fa fa-map-marker"></i>{{$job->country}}</span>
-									<p>Job Category {{$job->parents->caption ?? ''}}</p>
+									<p>Job Category {{$job->navigation->caption ?? ''}}</p>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
@@ -34,7 +34,7 @@
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
 								<div class="text">
-									<a href="{{route('jobapply',$job->id)}}" class="btn btn-outline" target="_blank">Apply Now</a>
+									<a href="{{route('jobapply',$job->navigation->nav_name)}}" class="btn btn-outline" target="_blank">Apply Now</a>
 								</div>
 							</div>
 						</div>
