@@ -79,7 +79,7 @@ class ContactController extends Controller
         $job_detail = Navigation::where('nav_name',$slug)->first();
         $global_setting = GlobalSetting::all()->first(); 
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
-        return view("admin.inquiry")->with(['job_detail'=>$job_detail,'menus'=>$menus,'global_setting'=>$global_setting,'job_slug'=>$slug]);
+        return view("admin.apply-form")->with(['job_detail'=>$job_detail,'menus'=>$menus,'global_setting'=>$global_setting,'job_slug'=>$slug]);
     }
     public function ContactStore(Request $req){
         $validated = $req->validate([
