@@ -93,7 +93,7 @@ class HomeController extends Controller
         }
         //return $misson;
         $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
-        $job = Job::all()->paginate(10);
+        $job = Job::query()->paginate(10);
         $global_setting = GlobalSetting::all()->first(); 
         //return $missons;       
         return view("website.index")->with(['partners'=>$partners,'jobs'=>$job,'testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'banners'=>$banners,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'job_categories'=>$job_categories,'message'=>$message,'process'=>$process]);
