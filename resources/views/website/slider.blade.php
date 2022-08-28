@@ -51,7 +51,7 @@
 								<p>Job Category: {{$job->navigation->caption}}
 								<span class="job_company">Salary : Rs. {{$job->salary}} Monthly</span>
 								<span>Contract : {{$job->contract_time}} Year(s)</span>
-								<a href="apply-form.html" class="btn btn-outline" target="_blank">Apply Now</a>
+								<a href="{{route('jobapply',$job->navigation->nav_name)}}" class="btn btn-outline" target="_blank">Apply Now</a>
 							</div>
 						@endforeach
 					</div>
