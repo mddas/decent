@@ -82,6 +82,7 @@ class ContactController extends Controller
         return view("admin.apply-form")->with(['job_detail'=>$job_detail,'menus'=>$menus,'global_setting'=>$global_setting,'job_slug'=>$slug]);
     }
     public function ContactStore(Request $req){
+        return $req;
         $validated = $req->validate([
             'name' => 'required',
             'number' => 'required',
