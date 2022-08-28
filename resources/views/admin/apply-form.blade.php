@@ -11,7 +11,7 @@
 								<input name="name" type="text" placeholder="Name *" class="form-control required" required>
 							</div>
 							<div class="form-field col-md-6">
-								<input name="apply_for" type="text" placeholder="Apply for..." class="form-control">
+								<input name="apply_for" type="text" placeholder="Apply for..." class="form-control" value="{{$job_detail->caption ?? ''}}">
 							</div>
 						</div>
 						<div class="form-group row">
@@ -33,7 +33,7 @@
 								<textarea name="message" placeholder="Messages *" class="txtarea form-control required"></textarea>
 							</div>
 						</div>
-						<input type="hidden" name="id" class="hidden" name="form-anti-honeypot" value="{{$id}}">
+						<input type="hidden" name="id" class="hidden" name="form-anti-honeypot" value="{{$job_detail->getJob->id ?? ''}}">
 						<button type="submit" class="btn">Submit</button>
 						<div class="form-results"></div>
 					</form>
