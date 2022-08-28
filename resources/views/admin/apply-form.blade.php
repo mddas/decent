@@ -1,7 +1,4 @@
 @extends('layouts.master')
-@section('slider')
-	 @include("website.banner")
-@endsection
 @section('content')
 	
 	<div class="section-pad mar-t150 bg-light">
