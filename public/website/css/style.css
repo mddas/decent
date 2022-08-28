@@ -3190,6 +3190,13 @@ form label.error {
   border: 1px solid rgba(0, 0, 0, 0.04);
   text-align: center;
   padding: 10px;
+  min-height: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo-item:hover{
+  box-shadow: 0 0 30px rgb(0 0 0 / 5%);
 }
 .logo-item img {
   border: 0 none;

@@ -13,6 +13,7 @@
 				<!-- job Row  -->
 				<div class="feature-row feature-service-row row feature-s4 off-text boxed-filled boxed-w">
 					<!---start---->
+					
 					@foreach($job_categories as $cat)
 					<div class="col-md-3 col-sm-4 col-xs-6 even">
 						<!-- job box -->						

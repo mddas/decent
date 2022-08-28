@@ -23,7 +23,7 @@
 										<span class="job_company">Salary : $ 600 Monthly</span>
 										<span>Contract : 2 Year(s)</span>
 										<a href="{{route('jobapply',$job->nav_name)}}" class="btn btn-outline" target="_blank">Apply Now</a>
-										<a href="/job-detail/{{$job->getJob->id}}" class="btn btn-outline" target="_blank">View Detail</a>
+										<a href="/job-detail/{{$job->getJob->id}}" class="btn btn-outline">View Detail</a>
 									</div>
 								</div>
 							</div>
