@@ -5,21 +5,21 @@
 		<div class="container">
 			<div class="apply-form">
 				<h3 class="heading-lg">Apply Form</h3>
-				<form id="quote-request" class="form-quote" action="form/quote-request.php" method="post">
+				<form id="quote-request" class="form-quote" action="{{route('contactstore')}}" method="POST" enctype='multipart/form-data'>
 						<div class="form-group row">
 							<div class="form-field col-md-6 form-m-bttm">
-								<input name="quote-request-name" type="text" placeholder="Name *" class="form-control required">
+								<input name="name" type="text" placeholder="Name *" class="form-control required" required>
 							</div>
 							<div class="form-field col-md-6">
-								<input name="quote-request-company" type="text" placeholder="Apply for..." class="form-control">
+								<input name="apply_for" type="text" placeholder="Apply for..." class="form-control">
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="form-field col-md-6 form-m-bttm">
-								<input name="quote-request-email" type="email" placeholder="Email *" class="form-control required email">
+								<input name="email" type="email" placeholder="Email *" class="form-control required email">
 							</div>
 							<div class="form-field col-md-6">
-								<input name="quote-request-phone" type="text" placeholder="Phone *" class="form-control required">
+								<input name="number" type="text" placeholder="Phone *" class="form-control required" required>
 							</div>
 						</div>
 						<div class="form-group row">
@@ -30,10 +30,10 @@
 						</div>
 						<div class="form-group row">
 							<div class="form-field col-md-12">
-								<textarea name="quote-request-message" placeholder="Messages *" class="txtarea form-control required"></textarea>
+								<textarea name="message" placeholder="Messages *" class="txtarea form-control required"></textarea>
 							</div>
 						</div>
-						<input type="text" class="hidden" name="form-anti-honeypot" value="">
+						<input type="hidden" name="id" class="hidden" name="form-anti-honeypot" value="{{$id}}">
 						<button type="submit" class="btn">Submit</button>
 						<div class="form-results"></div>
 					</form>
