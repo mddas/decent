@@ -1,24 +1,12 @@
 
-	 
-
-	@extends('layouts.master')
-    @section("content")
-			<div class="theme-inner-banner">
-				<div class="overlay">
-					<div class="container">
-						<h2>Gallery</h2>
-					</div> <!-- /.container -->
-				</div> <!-- /.overlay -->
-			</div> <!-- /.theme-inner-banner -->
-
-
-			<!-- 
-			=============================================
-				gallery
-			============================================== 
-			-->
-			@if(isset($photos))
-				<!-- Content Section -->
+ @extends("layouts.master")
+   @section('slider')
+	    @include("website.banner")
+    @endsection
+   @section('content')
+    
+	<!-- End Header -->
+	<!-- Content Section -->
 	<div class="section section-contents section-pad">
 		<div class="container">
 			<div class="content row">
@@ -77,10 +65,5 @@
 		</div>		
 	</div>
 	<!-- End Section -->
-		  @endif
-	 	<script src="js/jquery.bundle.js"></script>
-		<!-- Theme Script init() -->
-		<script src="js/script.js"></script>
-		<!-- End script -->
-    @endsection
-    
+
+  @endsection
