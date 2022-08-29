@@ -163,7 +163,7 @@
 							<div class="wgs-content">
 								<ul class="menu">
 									@foreach($job_categories as $cat)
-										<li><a href="/{{$cat->nav_name}}">{{$cat->caption}}</a></li>
+										<li><a href="/jobcategory/{{$cat->nav_name}}">{{$cat->caption}}</a></li>
 									@endforeach
 								</ul>
 							</div>
