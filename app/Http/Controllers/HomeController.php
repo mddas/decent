@@ -90,6 +90,13 @@ class HomeController extends Controller
         }
         //return $misson;
         $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
+        if(Navigation::all()->where('nav_name','client')->count()>0){
+            $partners_id = Navigation::all()->where('nav_name','client')->first()->id;
+            $partners = Navigation::all()->where('parent_page_id',$partners_id);
+        }
+        else{
+            $partners = [];
+        }
         $job = Job::query()->OrderBy('created_at','desc')->paginate(10);
         $global_setting = GlobalSetting::all()->first(); 
         //return $missons;       
