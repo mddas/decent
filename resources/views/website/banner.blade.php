@@ -6,7 +6,7 @@
 						<div class="page-breadcrumb">
 							<ul class="breadcrumb">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="index.html">{{$slug_detail->caption ?? $slug_detail0->caption ?? ''}}</a></li>
+								<li><a href="index.html">{{$slug_detail->caption ?? ''}}</a></li>
 								@if(isset($slug_detail1))
 									<li class="active"><span>{{$slug_detail1->caption}}</span></li>
 								@endif
