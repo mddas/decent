@@ -86,7 +86,7 @@
 		<div class="navbar navbar-primary">
 			<div class="container">
 				<!-- Logo -->
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="/">
 					<img class="logo logo-dark" alt="" src="/website/image/logo.jpg">
 					<img class="logo logo-light" alt="" src="/website/image/logo-transparent.png" srcset="/website/image/logo-light2x.png 2x">
 				</a>
