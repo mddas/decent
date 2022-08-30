@@ -29,8 +29,8 @@ class HomeController extends Controller
         else{
             $partners = [];
         }
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()!=null){
-            $service_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()->id;
+        if(Navigation::query()->where('nav_category','Main')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()!=null){
+            $service_id = Navigation::query()->where('nav_category','Main')->where('nav_name', 'LIKE', "%service%")->where('page_type','Group')->latest()->first()->id;
             $services = Navigation::query()->where('parent_page_id',$service_id)->latest()->get();
             //return $services;
         }
@@ -99,7 +99,8 @@ class HomeController extends Controller
         }
         $job = Job::query()->OrderBy('created_at','desc')->paginate(10);
         $global_setting = GlobalSetting::all()->first(); 
-        //return $missons;       
+        
+
         return view("website.index")->with(['partners'=>$partners,'jobs'=>$job,'testimonial'=>$testimonial,'statistics'=>$statistics,'services'=>$services,'banners'=>$banners,'about'=>$About,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'message'=>$message,'process'=>$process]);
     }
     public function category($menu){
