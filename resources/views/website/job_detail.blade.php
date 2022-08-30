@@ -12,7 +12,7 @@
 							<h4>Helper Urgently Needed</h4><a href="{{route('jobapply',$job->navigation->nav_name)}}" class="btn btn-outline apply-button">Apply Now</a>
                             <div class="row">
                             <div class="col-md-8">
-							<p>{{$job->navigation->}}</p>
+							<p>{{$job->navigation->caption}}</p>
                             </div>
                             <div class="col-md-4">
                                 <figure><img src="{{$job->navigation->banner_image}}" alt="job-titel" class="img-fluid"></figure>
