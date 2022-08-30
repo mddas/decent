@@ -1,6 +1,6 @@
 @php
 	$job_categories = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null)->paginate(5);
-    $global_setting = app\Models\GlobalSetting::all()->first();
+    $global_setting = App\Models\GlobalSetting::all()->first();
 	$normal_gallary_notice = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
 	if(isset($normal)){
         $seo = $normal;

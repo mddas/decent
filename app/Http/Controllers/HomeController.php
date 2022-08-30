@@ -387,18 +387,8 @@ class HomeController extends Controller
         }
     }
     public function singlePage($slug){
-        $job =Navigation::all()->where('nav_name',$slug)->first();  
-        if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%partner%")->where('page_type','Group')->latest()->first()!=null){
-            $services_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%partner%")->where('page_type','Group')->latest()->first()->id;
-            $services = Navigation::query()->where('parent_page_id',$services_id)->latest()->get();
-            //return $services;
-        }
-        else{
-            $services = null;
-        }      
-        $global_setting = GlobalSetting::all()->first(); 
-       
-        return view("website.job_detail")->with(["services"=>$services,'job'=>$job,'global_setting'=>$global_setting]);
+        $job =Job::find($slug);     
+        return view("website.job_detail")->with(['job'=>$job]);
     }
     public function ReadMore($slug){
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%message%")->where('page_type','Group')->latest()->first()!=null){
