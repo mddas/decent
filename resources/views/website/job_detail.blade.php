@@ -15,7 +15,7 @@
 							<p>{{$job->long_content}}</p>
                             </div>
                             <div class="col-md-4">
-                                <figure><img src="{{$job->banner_image}}" alt="job-titel" class="img-fluid"></figure>
+                                <figure><img src="{{$job->navigation->banner_image}}" alt="job-titel" class="img-fluid"></figure>
                             </div>
                             </div>
 							<ul>
