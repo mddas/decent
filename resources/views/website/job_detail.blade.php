@@ -15,7 +15,7 @@
                                 <figure><img src="@if($job->navigation->banner_image!=null) {{$job->navigation->banner_image}} @else {{$job->navigation->parents->banner_image}} @endif" alt="job-titel" class="img-fluid"></figure>
                             </div>
 							<div class="col-md-8">
-							<p>{{$job->navigation->long_content}}</p>
+							<p>@php echo $job->navigation->long_content; @endphp</p>
                             </div>
                             </div>
 							<ul>
