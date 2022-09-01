@@ -45,9 +45,9 @@
 							</div>
 						</div>
 					</div>
-					<center><a href="/all-jobs" class="btn" style="margin-bottom:10px">View All</a></center>
 				</div>
 				@endforeach
+                <center><a href="/all-jobs" class="btn" style="margin-bottom:10px">View All</a></center>
 				@else
 				<center>
 				  <img src="/assets/img/comming-soon.png">
