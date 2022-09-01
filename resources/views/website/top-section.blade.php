@@ -15,7 +15,7 @@
 					
 				   @php	$index=0; $job_categories = app\Models\Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null); @endphp
 					@foreach($job_categories as $cat)
-						@if($index>=5) @break @endif
+						@if($index>=4) @break @endif
 					<div class="col-md-3 col-sm-4 col-xs-6 even">
 						<!-- job box -->						
 						<div class="feature">

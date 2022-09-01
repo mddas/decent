@@ -3921,9 +3921,9 @@ form label.error {
 }
 
 /* ========================================================================== 15.0 Feature Box css ========================================================================== */
-.section-services .col-md-3 {
+/* .section-services .col-md-3 {
   width: 20%;
-}
+} */
 .feature-row:first-child,
 .feature-row.mgfix {
   margin-top: -60px;
@@ -4020,6 +4020,7 @@ form label.error {
   margin: 0;
   width: 100%;
   height: auto;
+  min-height: 212px;
   border-radius: 0;
 }
 .feature .fbox-photo.imagebg img {

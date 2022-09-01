@@ -41,6 +41,10 @@
 					</div>
 				</div>
 				@endforeach
+				@else
+				<center>
+				  <img src="/assets/img/comming-soon.png">
+				</center>
 				@endif
 				<!----close---->
 			</div>
