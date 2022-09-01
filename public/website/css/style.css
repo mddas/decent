@@ -5634,8 +5634,10 @@ div[class*="filtered-menu"].style-v2 li:last-child {
     padding: 40px 40px 0 20px;
   }
   .boxed-w .heading-box span {
-    margin-top: 30px;
+      margin-top: 10px;
     padding-left: 0;
+    font-size: 14px;
+    text-align: center;
   }
   .boxed-w .heading-box span:before {
     display: none;
