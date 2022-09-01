@@ -5347,7 +5347,7 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   .feature,
   .team-profile,
   .team-member {
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .feature .fbox-content h3,
   .feature .fbox-content h4 {
@@ -6126,6 +6126,7 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   }
   .heading-section {
     font-size: 1.5em;
+    text-align: center;
   }
   .heading-section.heading-sm {
     font-size: 1.125em;
