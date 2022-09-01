@@ -5754,7 +5754,6 @@ div[class*="filtered-menu"].style-v2 li:last-child {
     float: none;
   }
   .navbar-nav li .dropdown-menu li {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 0 none;
   }
   .navbar-nav li .dropdown-menu li a {
