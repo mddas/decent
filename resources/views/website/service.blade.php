@@ -13,7 +13,7 @@
 									<div class="col-sm-4">
 										<div class="service-box">
 										<div class="icon-box style-s1 photo-plx-full">
-											<em class="{{$service->caption}}" aria-hidden="true"></em>
+											<em class="{{$service->short_content}}" aria-hidden="true"></em>
 										</div>
 										<h4>{{$service->caption}}</h4>
 										</div>
