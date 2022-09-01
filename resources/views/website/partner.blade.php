@@ -8,7 +8,7 @@
 						<div class="logo-item"><img alt="" width="190" height="82" src="{{$partner->banner_image}}"></div>
 					@endforeach
 				</div>
-
+					<center><a href="/client" class="btn" style="margin-bottom:10px">View All</a></center>
 			</div>
 		</div>	
 	</div>
