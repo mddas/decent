@@ -92,7 +92,7 @@ class HomeController extends Controller
         $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
         if(Navigation::all()->where('nav_name','client')->count()>0){
             $partners_id = Navigation::all()->where('nav_name','client')->first()->id;
-            $partners = Navigation::all()->where('parent_page_id',$partners_id);
+            $partners = Navigation::query()->where('parent_page_id',$partners_id)->inRandomOrder()->limit(15)->get();;
         }
         else{
             $partners = [];
