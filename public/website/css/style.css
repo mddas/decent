@@ -3196,7 +3196,7 @@ form label.error {
   align-items: center;
   justify-content: space-around;
 }
-.logo-item:hover{
+.logo-item:hover {
   box-shadow: 0 0 30px rgb(0 0 0 / 5%);
 }
 .logo-item img {
@@ -3689,7 +3689,7 @@ form label.error {
 .job-detail .btn-outline.apply-button {
   margin-bottom: 10px;
 }
-.job-detail figure img{
+.job-detail figure img {
   max-width: 250px;
   margin-bottom: 10px;
 }
@@ -5634,7 +5634,7 @@ div[class*="filtered-menu"].style-v2 li:last-child {
     padding: 40px 40px 0 20px;
   }
   .boxed-w .heading-box span {
-      margin-top: 10px;
+    margin-top: 10px;
     padding-left: 0;
     font-size: 14px;
     text-align: center;
@@ -6126,6 +6126,8 @@ div[class*="filtered-menu"].style-v2 li:last-child {
   }
   .heading-section {
     font-size: 1.5em;
+  }
+  .section-services .heading-section {
     text-align: center;
   }
   .heading-section.heading-sm {
