@@ -94,6 +94,9 @@ Route::prefix('admin')->group(function(){
 
 });
 
+
+Route::get('/all-jobs',[HomeController::class,'allJobs'])->name('TotalJobs');
+
 Route::get('get_gallery_photos',[HomeController::class,'get_gallery_photos'])->name('get_gallery_photos');
 Route::get('gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
 Route::get('inquiry',[ContactController::class,'inquiry'])->name('inquiry');

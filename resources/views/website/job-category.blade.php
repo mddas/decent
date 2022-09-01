@@ -3,7 +3,7 @@
 	    @include("website.banner")
     @endsection
 @section('content')
-	</header>
+	
 	<!-- End Header -->
 
 	<!-- Content -->

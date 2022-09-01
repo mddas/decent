@@ -409,9 +409,9 @@ class HomeController extends Controller
         return view("website.all_category")->with(['job_categories'=>$job_categories,'global_setting'=>$global_setting]);
     }
     public function allJobs(){
-         $jobs = Navigation::query()->where('page_type','Job')->latest()->get();
+         $jobs = Job::query()->latest()->get();
          $global_setting = GlobalSetting::all()->first(); 
-         return view("website.job-list")->with(['jobs'=>$jobs,'global_setting'=>$global_setting]);
+         return view("website.total_job_list")->with(['jobs'=>$jobs,'global_setting'=>$global_setting]);
     }
     public function GalleryView($slug){
         $navigataion_id = Navigation::where('nav_name',$slug)->first()->id;        
@@ -420,4 +420,5 @@ class HomeController extends Controller
          $global_setting = GlobalSetting::all()->first(); 
          return view("website.gallery_view")->with(['photos'=>$photos,'global_setting'=>$global_setting]);
     }
+   
 }

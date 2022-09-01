@@ -1,4 +1,10 @@
-	<div class="section-pad home-job bg-light">
+@extends('layouts.master')
+   @section('slider')
+	    @include("website.banner")
+    @endsection
+@section('content')
+	
+    <div class="section-pad home-job bg-light">
 		<div class="container">
 			<h5 class="heading-sm-lead">Job</h5>
 				<h2 class="heading-section">New Demand</h2>
@@ -51,3 +57,4 @@
 			</div>
 		</div>
 	</div>
+@endsection
