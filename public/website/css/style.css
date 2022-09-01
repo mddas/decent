@@ -1582,6 +1582,7 @@ form label.error {
 }
 .service-box {
   margin-bottom: 10px;
+  min-height: 135px;
 }
 .icon-box {
   width: 48px;
