@@ -10,7 +10,7 @@
 							<div class="row">
 								<!----start---->
 								@foreach($services as $service)
-									<div class="col-sm-4">
+									<div class="col-sm-4 col-xs-6">
 										<div class="service-box">
 										<div class="icon-box style-s1 photo-plx-full">
 											<em class="{{$service->short_content}}" aria-hidden="true"></em>
