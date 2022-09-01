@@ -64,14 +64,13 @@
                                 <th>Name</th>
                                 <th>Number</th>
                                 <th>Email</th>
+                                 <th>Subject</th>
                                 <th>Message</th>
                                 <th>Resumes</th>
                                 <th>job title</th>
-                                <th>company name</th>
                                 <th>country</th>
-                                <th>salary</th>
-                                <th>contract period</th>
-                                <th>job category</th>
+                                <th>apply for</th>
+                                <th>Job Detail</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -84,14 +83,13 @@
                                         <td>{{$contact->name ?? ''}}</td>                                     
                                         <td>{{$contact->number ?? ''}}</td>
                                         <td>{{$contact->email ?? ''}}</td>
+                                        <td>{{$contact->subject ?? ''}}</td>
                                         <td>{{$contact->message ?? ''}}</td>
                                         <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>
                                         <td>{{$contact->job_id ?? ''}}</td>
-                                        <td>{{$contact->contract_time ?? ''}}</td>
-                                        <td>{{$contact->navigation->short_content ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td>
+                                        <td>{{$contact->country ?? ''}}</td>
+                                        <td>{{$contact->apply_for ?? ''}}</td>
+                                        <td></td>
                                        <td><a href="{{route('contactDelete',$contact->id)}}"><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
                                     </tr>
                                     @endforeach
