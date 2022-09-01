@@ -11,14 +11,14 @@
 						<div class="row flex align-item-center">
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
-									<h6>Helper Urgently Needed</h6>
+									<h6>{{$job->navigation->caption ?? ''}}</h6>
 									<span class="job_company">Company: {{$job->company_name}}</span>
 								</div>
 							</div>
 							<div class="col-md-3 res-m-bttm-sm">
 								<div class="text">
 									<span><i class="fa fa-map-marker"></i>{{$job->country}}</span>
-									<p>Job Category : {{$job->navigation->caption ?? ''}}</p>
+									<p>Job Category : {{$job->navigation->parents->caption ?? ''}}</p>
 								</div>
 							</div>
 							<div class="col-md-2 res-m-bttm-sm">
