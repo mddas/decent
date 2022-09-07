@@ -42,17 +42,18 @@
 					<div class="contact-details col-md-4 col-md-offset-1">
 						<ul class="contact-list">
 							<li><strong class="color-primary ucap">Address</strong><br>
-								<strong>Sunder Nagar Marg-3</strong><br>
-								Basundhara, Kathmandu
+								@php echo $normal->short_content; @endphp
+								<!-- <strong>Sunder Nagar Marg-3</strong><br>
+								Basundhara, Kathmandu -->
 							</li>
 							<li><strong class="color-primary ucap">Phone</strong><br>
-								<a href="tel:97714385804">+977-14385804</a><br>
-								<a href="tel:9779857089191">+977-9857089191</a>
+								@php echo $normal->long_content; @endphp
 							</li>
 							<li><strong class="color-primary ucap">Email</strong><br>
-								<a href="mailto:info@decentemployment.com.np">info@decentemployment.com.np</a>
+								<a href="mailto:{{$global_setting->site_email}}">{{$global_setting->site_email}}</a>
 							</li>
 						</ul>
+						
 					</div>
 				</div>
 
