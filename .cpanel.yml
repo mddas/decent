@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/demoradiantnepal/decent.demo.radiantnepal.com/
+    - export DEPLOYPATH=/home2/decentemployment/public_html/
     - /bin/cp -r * $DEPLOYPATH
