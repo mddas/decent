@@ -110,13 +110,12 @@ class ContactController extends Controller
         $contact->country = $req['country'];
         $contact->save();
         if($contact){
-            return "Form Submitted sucessfully";
             Session::flash('contact', 'Thanks for submitting'); 
-            return redirect('/');
+            return redirect('/contact');
         }
         else{
-            Session::flash('contact_error', 'Sorry form submitted failed'); 
-            return redirect('/');
+            Session::flash('contact', 'Sorry form submitted failed'); 
+            return redirect('/contact');
         }
 
     }

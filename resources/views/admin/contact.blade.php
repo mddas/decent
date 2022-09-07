@@ -8,9 +8,12 @@
 			<div class="content row">
 
 				<h2 class="heading-lg">Get in Touch</h2>
+						@if(Session::has('contact'))
+									<p class="alert alert-info">{{ Session::get('contact') }}</p>
+						@endif
 				<div class="contact-content row">
 					<div class="drop-message col-md-7 res-m-bttm">
-						<form id="quote-request" class="form-quote" action="{{route('contactstore')}}" method="post" enctype='multipart/form-data'>
+						<form class="form-quote" action="{{route('contactstore')}}" method="post" enctype='multipart/form-data'>
 							@csrf
 								<div class="form-group row">
 									<div class="form-field col-md-6 form-m-bttm">
