@@ -89,7 +89,8 @@ class HomeController extends Controller
             $process = [];
         }
         //return $misson;
-        $job_categories = Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null);
+        $job_categories = Navigation::query()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null)->where('page_status','1')->orderBy('position','ASC')->get();
+        //return $job_categories;
         if(Navigation::all()->where('nav_name','client')->count()>0){
             $partners_id = Navigation::all()->where('nav_name','client')->first()->id;
             $partners = Navigation::query()->where('parent_page_id',$partners_id)->inRandomOrder()->limit(15)->get();;

@@ -13,7 +13,7 @@
 					</div>
 					<!---start----->
 					
-				   @php	$index=0; $job_categories = app\Models\Navigation::all()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null); @endphp
+				   @php	$index=0; $job_categories = app\Models\Navigation::query()->where('nav_category','Main')->where('page_type','Group')->where('banner_image','!=',null)->where('page_status','1')->orderBy('position','ASC')->get(); @endphp
 					@foreach($job_categories as $cat)
 						@if($index>=4) @break @endif
 					<div class="col-md-3 col-sm-4 col-xs-6 even">
@@ -24,7 +24,7 @@
 									<img src="{{$cat->banner_image}}" alt="">
 								</div>
 								<div class="fbox-over">
-									<h3 class="title">{{$cat->caption}} {{$index}}</h3>
+									<h3 class="title">{{$cat->caption}}</h3>
 									<div class="fbox-content">
 										<p>{{$cat->short_content}}</p>
 										<span class="btn">View Job</span>
